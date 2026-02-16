@@ -1,4 +1,4 @@
-# AssetLink OS Dashboard v7.2
+# AssetLink OS Dashboard v7.3
 
 Modern React/TypeScript dashboard application for AssetLink OS with Supabase backend.
 
