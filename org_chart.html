@@ -1,0 +1,244 @@
+<div id="org-chart" class="nodes-sub-tab">
+    <div class="org-chart">
+        <!-- CEO Level -->
+        <div class="org-level">
+            <div class="org-node ceo">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name=Ayoub&background=6d28d9&color=fff" alt="Ayoub">
+                </div>
+                <div class="node-content">
+                    <h3>Ayoub</h3>
+                    <p class="role">CEO & Founder</p>
+                    <div class="tags">
+                        <span class="tag">Strategy</span>
+                        <span class="tag">Vision</span>
+                        <span class="tag">Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistant Level -->
+        <div class="org-level">
+            <div class="org-node ai-assistant">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name=AL&background=2563eb&color=fff" alt="AssetLink">
+                </div>
+                <div class="node-content">
+                    <h3>AssetLink</h3>
+                    <p class="role">Chief AI Assistant</p>
+                    <div class="tags">
+                        <span class="tag model">Claude 3.5</span>
+                        <span class="tag">Core Agent</span>
+                    </div>
+                    <div class="node-metrics">
+                        <div class="metric">
+                            <span class="label">Skills</span>
+                            <span class="value">8</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Tasks</span>
+                            <span class="value">3</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Agents</span>
+                            <span class="value">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-Agents Level (Placeholder) -->
+        <div class="org-level sub-agents">
+            <div class="org-node agent placeholder">
+                <div class="avatar">
+                    <div class="placeholder-icon">+</div>
+                </div>
+                <div class="node-content">
+                    <h3>Add Agent</h3>
+                    <p class="role">New AI Agent</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.org-level {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.org-level::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1rem;
+    background: var(--border);
+}
+
+.org-level:first-child::before {
+    display: none;
+}
+
+.org-node {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    min-width: 300px;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.org-node:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+}
+
+.org-node::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1rem;
+    background: var(--border);
+}
+
+.org-node.ceo {
+    background: var(--purple-glow);
+    border-color: var(--purple);
+}
+
+.org-node.ai-assistant {
+    background: var(--accent-glow2);
+    border-color: var(--accent);
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.node-content {
+    flex: 1;
+}
+
+.node-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, var(--text), var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.node-content .role {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background: var(--bg-subtle);
+    color: var(--text-dim);
+}
+
+.tag.model {
+    background: var(--success-glow);
+    color: var(--success);
+}
+
+.node-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.metric .label {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.metric .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.placeholder {
+    opacity: 0.6;
+    border-style: dashed;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.placeholder:hover {
+    opacity: 1;
+    border-color: var(--accent);
+    background: var(--accent-glow2);
+}
+
+.placeholder-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--bg-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--text-dim);
+}
+</style>

@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-02-15T22:40:00Z",
+    "action": "System Initialized",
+    "details": "AssetLink Core Activity Logging enabled.",
+    "type": "system"
+  },
+  {
+    "timestamp": "2026-02-15T22:40:05Z",
+    "action": "Persistence Upgrade",
+    "details": "LocalStorage replaced with direct file-system sync via Python server.",
+    "type": "upgrade"
+  }
+]

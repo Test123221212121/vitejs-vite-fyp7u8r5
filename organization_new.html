@@ -1,0 +1,689 @@
+<!-- Organization Tab -->
+<div id="organization" class="tab-content">
+    <div class="org-header">
+        <h2>Organization Network</h2>
+        <div class="org-actions">
+            <button class="btn" onclick="addNewAgentNode()">+ Add Agent</button>
+            <button class="btn" onclick="saveNodeLayout()">💾 Save Layout</button>
+            <select id="view-mode" class="btn" onchange="switchViewMode()">
+                <option value="flow">Flow View</option>
+                <option value="hierarchy">Hierarchy View</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="node-canvas-container">
+        <div class="canvas-toolbar">
+            <div class="tool-group">
+                <button class="btn btn-sm" onclick="zoomIn()">🔍+</button>
+                <button class="btn btn-sm" onclick="zoomOut()">🔍-</button>
+                <button class="btn btn-sm" onclick="resetZoom()">Reset</button>
+            </div>
+            <div class="tool-group">
+                <button class="btn btn-sm" onclick="autoLayout()">Auto Layout</button>
+                <button class="btn btn-sm" onclick="toggleMinimap()">Minimap</button>
+            </div>
+        </div>
+
+        <div id="node-canvas" class="node-canvas">
+            <!-- CEO Node -->
+            <div class="workflow-node ceo" draggable="true" data-node-id="ceo">
+                <div class="node-header">
+                    <div class="node-icon">👑</div>
+                    <div class="node-title">CEO</div>
+                    <div class="node-status active"></div>
+                </div>
+                <div class="node-body">
+                    <div class="node-avatar">
+                        <img src="https://ui-avatars.com/api/?name=Ayoub&background=6d28d9&color=fff" alt="Ayoub">
+                    </div>
+                    <div class="node-info">
+                        <h4>Ayoub</h4>
+                        <p>Vision & Strategy</p>
+                    </div>
+                </div>
+                <div class="node-ports">
+                    <div class="port output" data-port-id="ceo-out"></div>
+                </div>
+            </div>
+
+            <!-- AssetLink Node -->
+            <div class="workflow-node ai" draggable="true" data-node-id="assetlink">
+                <div class="node-header">
+                    <div class="node-icon">🤖</div>
+                    <div class="node-title">Core AI</div>
+                    <div class="node-actions">
+                        <button class="btn-icon" onclick="toggleNodeExpand(event, 'assetlink')">▼</button>
+                        <div class="node-status active"></div>
+                    </div>
+                </div>
+                <div class="node-body">
+                    <div class="node-avatar">
+                        <img src="https://ui-avatars.com/api/?name=AL&background=2563eb&color=fff" alt="AssetLink">
+                    </div>
+                    <div class="node-info">
+                        <h4>AssetLink</h4>
+                        <p>Claude 3.5 | Opus 4.6</p>
+                    </div>
+                </div>
+
+                <div class="node-ports">
+                    <div class="port input" data-port-id="al-in">
+                        <span class="port-label">Input</span>
+                    </div>
+                    <div class="port output" data-port-id="al-out">
+                        <span class="port-label">Output</span>
+                    </div>
+                </div>
+
+                <div class="node-details">
+                    <div class="detail-section">
+                        <div class="section-header" onclick="toggleSection(event, 'tools')">
+                            <span class="section-title">🛠️ Tools (15)</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content tools-grid">
+                            <div class="tool-item">
+                                <span class="tool-icon">📝</span>
+                                <div class="tool-info">
+                                    <span class="tool-name">read</span>
+                                    <span class="tool-type">File System</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+                                <span class="tool-icon">💾</span>
+                                <div class="tool-info">
+                                    <span class="tool-name">write</span>
+                                    <span class="tool-type">File System</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+                                <span class="tool-icon">🌐</span>
+                                <div class="tool-info">
+                                    <span class="tool-name">browser</span>
+                                    <span class="tool-type">Automation</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+                                <span class="tool-icon">⚡</span>
+                                <div class="tool-info">
+                                    <span class="tool-name">exec</span>
+                                    <span class="tool-type">System</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+                                <span class="tool-icon">💬</span>
+                                <div class="tool-info">
+                                    <span class="tool-name">message</span>
+                                    <span class="tool-type">Communication</span>
+                                </div>
+                            </div>
+                            <button class="show-more" onclick="showAllTools(event)">Show All Tools...</button>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="section-header" onclick="toggleSection(event, 'skills')">
+                            <span class="section-title">📚 Skills (8)</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content skills-grid">
+                            <div class="skill-item">
+                                <span class="skill-icon">🤖</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Agent Browser</span>
+                                    <span class="skill-type automation">Automation</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">☁️</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Weather</span>
+                                    <span class="skill-type api">API</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">🎨</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Image Generation</span>
+                                    <span class="skill-type creative">Creative</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">🔊</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Whisper API</span>
+                                    <span class="skill-type api">API</span>
+                                </div>
+                            </div>
+                            <button class="show-more" onclick="showAllSkills(event)">Show All Skills...</button>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="section-header" onclick="toggleSection(event, 'files')">
+                            <span class="section-title">📁 Files (12)</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content files-list">
+                            <div class="file-item">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">AGENTS.md</span>
+                                <button class="btn-xs" onclick="viewFile('AGENTS.md', event)">View</button>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">MEMORY.md</span>
+                                <button class="btn-xs" onclick="viewFile('MEMORY.md', event)">View</button>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">SOUL.md</span>
+                                <button class="btn-xs" onclick="viewFile('SOUL.md', event)">View</button>
+                            </div>
+                            <button class="show-more" onclick="showAllFiles(event)">Show All Files...</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="node-metrics">
+                    <div class="metric-group">
+                        <span class="metric-label">Status</span>
+                        <span class="metric-value success">Active</span>
+                    </div>
+                    <div class="metric-group">
+                        <span class="metric-label">Memory</span>
+                        <span class="metric-value">25%</span>
+                    </div>
+                    <div class="metric-group">
+                        <span class="metric-label">Tasks</span>
+                        <span class="metric-value">3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Agent Node -->
+            <div class="workflow-node agent placeholder" onclick="showAddAgentModal()">
+                <div class="node-header">
+                    <div class="node-icon">+</div>
+                    <div class="node-title">Add New Agent</div>
+                </div>
+                <div class="node-info">
+                    <p>Click to create a new AI agent</p>
+                </div>
+            </div>
+
+            <!-- Connection Lines -->
+            <svg class="connections-layer" style="pointer-events:none;">
+                <!-- Connections drawn via JavaScript -->
+            </svg>
+        </div>
+
+        <!-- Minimap -->
+        <div id="minimap" class="minimap"></div>
+    </div>
+
+    <!-- Node Context Menu -->
+    <div id="node-context-menu" class="context-menu" style="display:none;">
+        <div class="menu-item" onclick="expandNode()">
+            <span class="icon">📋</span>
+            <span>View Details</span>
+        </div>
+        <div class="menu-item" onclick="editNode()">
+            <span class="icon">✏️</span>
+            <span>Edit</span>
+        </div>
+        <div class="menu-item" onclick="viewNodeFiles()">
+            <span class="icon">📁</span>
+            <span>View Files</span>
+        </div>
+        <div class="menu-separator"></div>
+        <div class="menu-item warning" onclick="deleteNode()">
+            <span class="icon">🗑️</span>
+            <span>Delete</span>
+        </div>
+    </div>
+</div>
+
+<style>
+.org-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.org-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.node-canvas-container {
+    position: relative;
+    height: calc(100vh - 200px);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.canvas-toolbar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.tool-group {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--surface);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.node-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+    padding: 2rem;
+    transform-origin: top left;
+}
+
+.workflow-node {
+    position: absolute;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    min-width: 250px;
+    cursor: move;
+    box-shadow: var(--shadow-md);
+    transition: all 0.2s ease;
+}
+
+.workflow-node:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.workflow-node.ceo {
+    background: linear-gradient(135deg, var(--purple-glow), var(--surface));
+    border-color: var(--purple);
+}
+
+.workflow-node.ai {
+    background: linear-gradient(135deg, var(--accent-glow2), var(--surface));
+    border-color: var(--accent);
+}
+
+.workflow-node.expanded {
+    width: 400px;
+    z-index: 100;
+}
+
+.node-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.node-icon {
+    font-size: 1.2rem;
+}
+
+.node-title {
+    flex: 1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.node-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-dim);
+}
+
+.node-status.active {
+    background: var(--success);
+    box-shadow: 0 0 10px var(--success-glow);
+}
+
+.node-body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.node-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.node-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.node-info h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.node-info p {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.node-ports {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.port {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.port::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    transition: all 0.2s;
+}
+
+.port:hover::before {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.port.input::before {
+    background: var(--purple);
+}
+
+.port.output::before {
+    background: var(--accent);
+}
+
+.port-label {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.input .port-label {
+    margin-left: 1rem;
+}
+
+.output .port-label {
+    margin-right: 1rem;
+    order: -1;
+}
+
+.node-details {
+    display: none;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
+.workflow-node.expanded .node-details {
+    display: block;
+}
+
+.detail-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.toggle-icon {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    transition: transform 0.3s;
+}
+
+.section-header.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.section-content {
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.section-header.collapsed + .section-content {
+    max-height: 0;
+}
+
+.tools-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.tool-item, .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: var(--bg-subtle);
+    border-radius: var(--radius-xs);
+    font-size: 0.8rem;
+}
+
+.tool-icon, .skill-icon {
+    font-size: 1.1rem;
+}
+
+.tool-info, .skill-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.tool-type, .skill-type {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    background: var(--surface-active);
+    color: var(--text-muted);
+}
+
+.skill-type.automation { color: var(--warning); }
+.skill-type.api { color: var(--success); }
+.skill-type.creative { color: var(--purple); }
+
+.files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    background: var(--bg-subtle);
+    border-radius: var(--radius-xs);
+}
+
+.show-more {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 0.5rem;
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-xs);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.show-more:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-hover);
+}
+
+.node-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.metric-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.metric-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.metric-value.success { color: var(--success); }
+
+.connections-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.connection {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2;
+    opacity: 0.5;
+}
+
+.minimap {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 200px;
+    height: 150px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+.minimap:hover {
+    opacity: 1;
+}
+
+.context-menu {
+    position: fixed;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    min-width: 150px;
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    border-radius: var(--radius-xs);
+    font-size: 0.85rem;
+}
+
+.menu-item:hover {
+    background: var(--surface-hover);
+}
+
+.menu-item.warning {
+    color: var(--danger);
+}
+
+.menu-separator {
+    height: 1px;
+    background: var(--border);
+    margin: 0.5rem 0;
+}
+
+.menu-item .icon {
+    font-size: 1.1rem;
+}
+
+.btn-xs {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+}
+
+.btn-icon {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-icon:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-hover);
+}
+</style>
+
+<script src="nodecanvas.js"></script>

@@ -1,0 +1,822 @@
+{
+  "urgent": [
+    {
+      "id": "t-1771181207047",
+      "text": "Email aanpassen",
+      "tag": "nieuw",
+      "content": "",
+      "projectId": "p3"
+    }
+  ],
+  "todo": [
+    {
+      "id": "tg_1771119181",
+      "text": "",
+      "projectId": "p1",
+      "customerId": "cl4",
+      "tag": "mobile",
+      "content": "Added via Telegram at 02:33"
+    },
+    {
+      "id": "t6",
+      "text": "Toegang mailboxen voor ochtend-briefing",
+      "projectId": "p1",
+      "customerId": "cl4",
+      "tag": "config"
+    },
+    {
+      "id": "t7",
+      "text": "Uitleg Bolt-codeerproces aan AssetLink",
+      "projectId": "p2",
+      "customerId": "cl4",
+      "tag": "onboarding"
+    },
+    {
+      "id": "t8",
+      "text": "Opzetten dagelijkse Local News/Inspiratie digest",
+      "projectId": "p1",
+      "customerId": "cl4",
+      "tag": "dev"
+    },
+    {
+      "id": "kam_ph0_01",
+      "text": "Fase 0 - Marktonderzoek: Formuleer Hoofdvraag",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research",
+      "content": "Hoofdvraag: 'Hoe kunnen we KAM-registratie transformeren van administratieve last naar geautomatiseerde procesverbetering?'"
+    },
+    {
+      "id": "kam_ph0_02",
+      "text": "Fase 0 - Deelvraag 1: Welke keten-processen zijn wettelijk verplicht?",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research",
+      "content": "Breng de harde eisen van Arbowet en ISO in kaart."
+    },
+    {
+      "id": "kam_ph0_03",
+      "text": "Fase 0 - Deelvraag 2: Waar falen huidige systemen (Zenya/AMS)?",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research",
+      "content": "Interview 5 KAM-co\u00c3\u00b6rdinatoren over hun grootste frustraties."
+    },
+    {
+      "id": "kam_ph0_04",
+      "text": "Fase 0 - Deelvraag 3: Wat is de 'Mobile-First' behoefte op de bouwplaats?",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research",
+      "content": "Werken ze offline? Hebben ze spraak-naar-tekst nodig?"
+    },
+    {
+      "id": "kam_ph0_05",
+      "text": "Fase 0 - Deelvraag 4: Welke data-integraties zijn essentieel?",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research",
+      "content": "ERP koppelingen (AFAS?), HR systemen?"
+    },
+    {
+      "id": "kam_ph0_06",
+      "text": "Fase 0 - Deelvraag 5: Wat is het ideale prijsmodel?",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research",
+      "content": "Per user, per module, of enterprise license?"
+    },
+    {
+      "id": "kam_ph0_07",
+      "text": "Fase 0 - Concurrentie Matrix maken",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research"
+    },
+    {
+      "id": "kam_ph0_08",
+      "text": "Fase 0 - Persona's uitwerken (De KAM-Manager vs. De Bouwvakker)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-0-research"
+    },
+    {
+      "id": "kam_ph1_01",
+      "text": "Fase 1 - Design: User Flow 'Melding Incident' uitwerken",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design"
+    },
+    {
+      "id": "kam_ph1_02",
+      "text": "Fase 1 - Design: User Flow 'Automatische Opvolging'",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design",
+      "content": "Het cruciale USP-scherm."
+    },
+    {
+      "id": "kam_ph1_03",
+      "text": "Fase 1 - Wireframes Mobile App (Meldingen)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design"
+    },
+    {
+      "id": "kam_ph1_04",
+      "text": "Fase 1 - Wireframes Desktop Dashboard (Analyse)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design"
+    },
+    {
+      "id": "kam_ph1_05",
+      "text": "Fase 1 - Design System: Kleurenpalet & Typografie",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design"
+    },
+    {
+      "id": "kam_ph1_06",
+      "text": "Fase 1 - Component Library: Formuliervelden & Triggers",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design"
+    },
+    {
+      "id": "kam_ph1_07",
+      "text": "Fase 1 - UX Review met Stakeholders",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design"
+    },
+    {
+      "id": "kam_ph1_08",
+      "text": "Fase 1 - High-Fidelity Prototype (Clickable)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-1-design"
+    },
+    {
+      "id": "kam_ph2_01",
+      "text": "Fase 2 - Dev: Tech Stack Keuze Defini\u00c3\u00abren",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_02",
+      "text": "Fase 2 - Dev: Database Architectuur (Relaties vs Graph)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_03",
+      "text": "Fase 2 - Dev: API Specificatie (OpenAPI/Swagger)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_04",
+      "text": "Fase 2 - Security: Authenticatie (OAuth2/SSO)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-sec"
+    },
+    {
+      "id": "kam_ph2_05",
+      "text": "Fase 2 - Security: Data Encryptie Strategie (At Rest & In Transit)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-sec"
+    },
+    {
+      "id": "kam_ph2_06",
+      "text": "Fase 2 - Security: Audit Log mechanisme bouwen",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-sec",
+      "content": "Wie wijzigde wat wanneer? Cruciaal voor ISO."
+    },
+    {
+      "id": "kam_ph2_07",
+      "text": "Fase 2 - Dev: Module 'Incidenten' bouwen",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_08",
+      "text": "Fase 2 - Dev: Module 'Inspecties' bouwen",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_09",
+      "text": "Fase 2 - Dev: 'Trigger Engine' Core Logic",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_10",
+      "text": "Fase 2 - Dev: Notificatie Service (Email/Push)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_11",
+      "text": "Fase 2 - Dev: Rapportage Generator (PDF Export)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-dev"
+    },
+    {
+      "id": "kam_ph2_12",
+      "text": "Fase 2 - Security: Pen-test uitvoeren (Intern/Extern)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-2-sec"
+    },
+    {
+      "id": "kam_ph3_01",
+      "text": "Fase 3 - Pilot: Testomgeving inrichten",
+      "projectId": "p5",
+      "customerId": "cl2",
+      "tag": "fase-3-pilot"
+    },
+    {
+      "id": "kam_ph3_02",
+      "text": "Fase 3 - Pilot: Onboarding AssetLink Engineering team",
+      "projectId": "p5",
+      "customerId": "cl2",
+      "tag": "fase-3-pilot"
+    },
+    {
+      "id": "kam_ph3_03",
+      "text": "Fase 3 - Pilot: 2 weken 'Schaduw-draaien' (naast huidig systeem)",
+      "projectId": "p5",
+      "customerId": "cl2",
+      "tag": "fase-3-pilot"
+    },
+    {
+      "id": "kam_ph3_04",
+      "text": "Fase 3 - Pilot: Evaluatie sessie & Bugbash",
+      "projectId": "p5",
+      "customerId": "cl2",
+      "tag": "fase-3-pilot"
+    },
+    {
+      "id": "kam_ph3_05",
+      "text": "Fase 3 - Validatie: ISO-auditor 'Dry Run' laten doen",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-3-pilot"
+    },
+    {
+      "id": "kam_ph4_01",
+      "text": "Fase 4 - Marketing: Waardepropositie Canvas invullen",
+      "projectId": "p10",
+      "customerId": "cl4",
+      "tag": "fase-4-mkt"
+    },
+    {
+      "id": "kam_ph4_02",
+      "text": "Fase 4 - Marketing: Landingspagina Copywriting",
+      "projectId": "p10",
+      "customerId": "cl4",
+      "tag": "fase-4-mkt"
+    },
+    {
+      "id": "kam_ph4_03",
+      "text": "Fase 4 - Marketing: Video 'How it works' scripten",
+      "projectId": "p10",
+      "customerId": "cl4",
+      "tag": "fase-4-mkt"
+    },
+    {
+      "id": "kam_ph4_04",
+      "text": "Fase 4 - Sales: Leadlijst genereren (VCA bedrijven)",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-4-sales"
+    },
+    {
+      "id": "kam_ph4_05",
+      "text": "Fase 4 - Sales: Sales Deck / Pitch maken",
+      "projectId": "p5",
+      "customerId": "cl4",
+      "tag": "fase-4-sales"
+    },
+    {
+      "id": "kam_ph4_06",
+      "text": "Fase 4 - Sales: Cold Email Sequence opzetten",
+      "projectId": "p10",
+      "customerId": "cl4",
+      "tag": "fase-4-sales"
+    },
+    {
+      "id": "kam_ph4_07",
+      "text": "Fase 4 - Launch: Product Hunt / LinkedIn lancering",
+      "projectId": "p10",
+      "customerId": "cl4",
+      "tag": "fase-4-mkt"
+    },
+    {
+      "id": "crm_ph0_01",
+      "text": "Fase 0 - Founder Program: Concept Shareholder Agreement opstellen",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "legal",
+      "content": "Vastleggen: 50/50 verdeling, IP-rechten bij AssetLink Software, Exit-strategie."
+    },
+    {
+      "id": "crm_ph0_02",
+      "text": "Fase 0 - Founder Program: Rolverdeling Formaliseren",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "strategy",
+      "content": "AssetLink: Tech & Product. Partner: Sales & Klantrelaties. Wie doet support?"
+    },
+    {
+      "id": "crm_ph0_03",
+      "text": "Fase 0 - Founder Program: Verdienmodel vastklikken",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "finance",
+      "content": "SaaS subscription? One-off? Hoe verdelen we de inkomsten na kosten?"
+    },
+    {
+      "id": "crm_ph1_01",
+      "text": "Fase 1 - Strategie: USP Bepaling (De 'Waarom')",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "strategy",
+      "content": "Waarom kiezen ze ons boven HubSpot of Pipedrive? (Hint: Focus op specifieke niche, bijv. Bouw/Installatie)."
+    },
+    {
+      "id": "crm_ph1_02",
+      "text": "Fase 1 - Strategie: De 'Anti-Feature' lijst maken",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "product",
+      "content": "Wat gaan we NIET bouwen? Keep it simple."
+    },
+    {
+      "id": "crm_ph2_01",
+      "text": "Fase 2 - Dev: Datamodel Relaties (Bedrijven/Personen)",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "dev"
+    },
+    {
+      "id": "crm_ph2_02",
+      "text": "Fase 2 - Dev: Pipeline View (Kanban style)",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "dev"
+    },
+    {
+      "id": "crm_ph2_03",
+      "text": "Fase 2 - Dev: Email Integratie (MVP: BCC box)",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "dev"
+    },
+    {
+      "id": "crm_ph2_04",
+      "text": "Fase 2 - Dev: Task Management (Follow-ups)",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "dev"
+    },
+    {
+      "id": "crm_ph3_01",
+      "text": "Fase 3 - Launch: Onboarding van de Partner's netwerk",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "sales"
+    },
+    {
+      "id": "crm_ph3_02",
+      "text": "Fase 3 - Launch: Feedback loop inrichten (Wekelijks)",
+      "projectId": "p4",
+      "customerId": "cl3",
+      "tag": "qa"
+    },
+    {
+      "id": "waas_01",
+      "text": "WaaS: Template Bibliotheek 'De Starter' (One-pager)",
+      "projectId": "p17",
+      "customerId": "cl6",
+      "tag": "dev",
+      "content": "Strakke, snelle template voor ZZP'ers. Hero, Diensten, Over, Contact."
+    },
+    {
+      "id": "waas_02",
+      "text": "WaaS: Template Bibliotheek 'De MKB'er' (Multi-page)",
+      "projectId": "p17",
+      "customerId": "cl6",
+      "tag": "dev",
+      "content": "Uitgebreider. Inclusief Blog/Nieuws sectie."
+    },
+    {
+      "id": "waas_03",
+      "text": "WaaS: Intake Formulier Automatiseren",
+      "projectId": "p17",
+      "customerId": "cl6",
+      "tag": "automation",
+      "content": "Klant vult formulier in (logo, kleuren, teksten) -> Wij krijgen een briefing."
+    },
+    {
+      "id": "waas_04",
+      "text": "WaaS: Hosting & Domein Protocol",
+      "projectId": "p17",
+      "customerId": "cl6",
+      "tag": "ops",
+      "content": "Standaard stappenplan: Hoe zetten we het live op HUN hosting zonder gedoe?"
+    },
+    {
+      "id": "waas_05",
+      "text": "WaaS: Sales Sheet 'Website in 1 Week'",
+      "projectId": "p17",
+      "customerId": "cl6",
+      "tag": "marketing",
+      "content": "Eenvoudige propositie: Geen gedoe, vast bedrag per maand of eenmalig."
+    },
+    {
+      "id": "taax_sales1",
+      "text": "PRIO: Offerte & Contract sturen (Formaliseren)",
+      "projectId": "p7",
+      "customerId": "cl3",
+      "tag": "sales",
+      "content": "Stuur formele offerte ter bevestiging van de mondelinge opdracht. Voeg algemene voorwaarden toe."
+    },
+    {
+      "id": "taax_finance1",
+      "text": "PRIO: Factuur 1e termijn (50%) versturen",
+      "projectId": "p7",
+      "customerId": "cl3",
+      "tag": "finance",
+      "content": "Geen betaling = geen verdere aanpassingen of livegang. 'Pay to play'."
+    },
+    {
+      "id": "taax_client1",
+      "text": "Klant Contact: Input Reminder + Demo Video",
+      "projectId": "p7",
+      "customerId": "cl3",
+      "tag": "account-mng",
+      "content": "Stuur mail: 'De basis staat (zie video). Voor de laatste 10% (jullie tone-of-voice) heb ik jullie input nodig.'"
+    },
+    {
+      "id": "pba_01",
+      "text": "Afronding: Email routing instellen naar klant",
+      "projectId": "p6",
+      "customerId": "cl1",
+      "tag": "tech",
+      "content": "DNS/MX records checken en forwarder instellen naar zijn eigen adres."
+    },
+    {
+      "id": "pba_02",
+      "text": "Content: Foto's verwerken (of AI upscale)",
+      "projectId": "p6",
+      "customerId": "cl1",
+      "tag": "design",
+      "content": "Wachten op input klant. Als kwaliteit te laag is: AI upscaling/generatie gebruiken."
+    },
+    {
+      "id": "pba_03",
+      "text": "Oplevering: Opleverdossier samenstellen",
+      "projectId": "p6",
+      "customerId": "cl1",
+      "tag": "admin",
+      "content": "Login gegevens, handleiding CMS, backup afspraken."
+    },
+    {
+      "id": "pba_sales1",
+      "text": "Upsell: Inspectie Applicaties pitchen",
+      "projectId": "p6",
+      "customerId": "cl1",
+      "tag": "sales",
+      "content": "Na livegang: Heeft hij tools nodig voor zijn inspecties op locatie?"
+    },
+    {
+      "id": "pba_sales2",
+      "text": "Upsell: Ondersteuning Inspectie ZZP werk",
+      "projectId": "p6",
+      "customerId": "cl1",
+      "tag": "sales"
+    },
+    {
+      "id": "pba_sales3",
+      "text": "Strategie: O-Prognose Clone (MJOP Software) bespreken",
+      "projectId": "p6",
+      "customerId": "cl1",
+      "tag": "strategy",
+      "content": "Kans om een moderne MJOP tool te bouwen ter vervanging van verouderde O-Prognose."
+    },
+    {
+      "id": "ipm_pricing1",
+      "text": "IPM Pro: Kostprijsberekening (TCO)",
+      "projectId": "p9",
+      "customerId": "cl2",
+      "tag": "finance",
+      "content": "Bereken serverkosten per klant + onderhoudsuren. Dit is je bodemprijs."
+    },
+    {
+      "id": "ipm_pricing2",
+      "text": "IPM Pro: Pricing Tiers vaststellen",
+      "projectId": "p9",
+      "customerId": "cl2",
+      "tag": "strategy",
+      "content": "Basic (SaaS) vs Enterprise (On-premise/Custom). Wat is de maandprijs?"
+    },
+    {
+      "id": "ipm_mkt1",
+      "text": "IPM Pro: Demo Video Scripten (De 'Node' USP)",
+      "projectId": "p9",
+      "customerId": "cl2",
+      "tag": "marketing",
+      "content": "Laat zien hoe makkelijk de visual flow werkt. 'Asset Management zonder spreadsheets'."
+    },
+    {
+      "id": "ipm_mkt2",
+      "text": "IPM Pro: Landingspagina live zetten",
+      "projectId": "p9",
+      "customerId": "cl2",
+      "tag": "web",
+      "content": "Focus op conversie: 'Vraag Demo Aan' knop centraal."
+    },
+    {
+      "id": "ipm_sales1",
+      "text": "IPM Pro: LinkedIn Outreach Campagne",
+      "projectId": "p9",
+      "customerId": "cl2",
+      "tag": "sales",
+      "content": "Target: Asset Managers en Technische Directeuren. 'Ik heb iets nieuws gebouwd, mag ik feedback?'"
+    },
+    {
+      "id": "std_ph0_01",
+      "text": "Studio: Founder Agreement (4 Partners)",
+      "projectId": "p8",
+      "customerId": "cl4",
+      "tag": "legal",
+      "content": "Verdeling aandelen, inbreng (geld vs arbeid), en beslisbevoegdheid (wie is de baas op de set?)."
+    },
+    {
+      "id": "std_fest1",
+      "text": "Festival Almere: Concept & Locatie Scouting",
+      "projectId": "p8",
+      "customerId": "cl4",
+      "tag": "event",
+      "content": "Welke datum? Welke locatie (Kinepolis, schouwburg, buitenlucht)? Subsidies gemeente Almere?"
+    },
+    {
+      "id": "std_plat1",
+      "text": "Studio Platform: Requirements bepalen",
+      "projectId": "p8",
+      "customerId": "cl4",
+      "tag": "dev",
+      "content": "Wordt het een Netflix-clone of een portfolio-site? Betaalmuur ja/nee?"
+    },
+    {
+      "id": "std_ops1",
+      "text": "Productie: Draaiboek Template maken",
+      "projectId": "p8",
+      "customerId": "cl4",
+      "tag": "ops",
+      "content": "Standaardisatie van script tot catering en call-sheets."
+    },
+    {
+      "id": "eng_res1",
+      "text": "Market Research: Top 10 Gemeentes identificeren",
+      "projectId": "p3",
+      "customerId": "cl2",
+      "tag": "sales",
+      "content": "Focus op gemeentes met verouderde infra of recente aanbestedingen."
+    },
+    {
+      "id": "eng_res2",
+      "text": "Dataverrijking: Contactgegevens Assetbeheerders zoeken",
+      "projectId": "p3",
+      "customerId": "cl2",
+      "tag": "sales",
+      "content": "Zoek naar functietitels: Hoofd Openbare Ruimte, Asset Manager, Beheerder Wegen/Groen."
+    },
+    {
+      "id": "eng_mail1",
+      "text": "Engineering Email Templates herschrijven",
+      "projectId": "p11",
+      "customerId": "cl4",
+      "tag": "copywriting",
+      "content": "De toon moet professioneel maar direct zijn. Focus op 'ontzorging'."
+    },
+    {
+      "id": "eng_vid1",
+      "text": "Promotievideo Engineering aanpassen",
+      "projectId": "p12",
+      "customerId": "cl4",
+      "tag": "content",
+      "content": "Nieuwe branding toepassen of intro inkorten."
+    },
+    {
+      "id": "eng_web1",
+      "text": "Website: Engineering landingspagina toevoegen",
+      "projectId": "p13",
+      "customerId": "cl4",
+      "tag": "web",
+      "content": "Moet aansluiten bij de nieuwe email-campagne."
+    },
+    {
+      "id": "web1",
+      "text": "SEO check: AssetLink.nl",
+      "projectId": "p13",
+      "customerId": "cl4",
+      "tag": "seo"
+    },
+    {
+      "id": "web2",
+      "text": "Portfolio update: Recente projecten toevoegen",
+      "projectId": "p13",
+      "customerId": "cl4",
+      "tag": "content"
+    },
+    {
+      "id": "web3",
+      "text": "Verbeterpunt: Hero-sectie moderniseren (Impact)",
+      "projectId": "p13",
+      "customerId": "cl4",
+      "tag": "design",
+      "content": "De eerste indruk moet 'Engineering Excellence' uitstralen. Huidige hero mist een duidelijke Call-to-Action."
+    },
+    {
+      "id": "web4",
+      "text": "Verbeterpunt: Laadsnelheid optimaliseren",
+      "projectId": "p13",
+      "customerId": "cl4",
+      "tag": "tech",
+      "content": "Google PageSpeed score moet omhoog. Afbeeldingen comprimeren en scripts minimaliseren."
+    },
+    {
+      "id": "web5",
+      "text": "Verbeterpunt: 'Over Ons' team pagina toevoegen",
+      "projectId": "p13",
+      "customerId": "cl4",
+      "tag": "content",
+      "content": "Mensen doen zaken met mensen. Laat de gezichten achter AssetLink zien om vertrouwen te winnen."
+    },
+    {
+      "id": "ceo1",
+      "text": "Definieer Q2 Doelen & OKRs",
+      "projectId": "p14",
+      "customerId": "cl5",
+      "tag": "strategy",
+      "content": "Wat zijn de 3 hoofddoelen voor het komende kwartaal? Omzet, Nieuwe Producten, of Teamgroei?"
+    },
+    {
+      "id": "ceo2",
+      "text": "Kwartaal-update voor stakeholders voorbereiden",
+      "projectId": "p14",
+      "customerId": "cl5",
+      "tag": "comms"
+    },
+    {
+      "id": "ceo3",
+      "text": "Long-term Roadmap Review (3 jaar)",
+      "projectId": "p14",
+      "customerId": "cl5",
+      "tag": "vision"
+    },
+    {
+      "id": "hr1",
+      "text": "Draft Onboarding Protocol nieuwe medewerkers",
+      "projectId": "p15",
+      "customerId": "cl5",
+      "tag": "admin"
+    },
+    {
+      "id": "hr2",
+      "text": "Review freelance overeenkomsten",
+      "projectId": "p15",
+      "customerId": "cl5",
+      "tag": "legal"
+    },
+    {
+      "id": "fin1",
+      "text": "Maandelijkse Cashflow Forecast opzetten",
+      "projectId": "p16",
+      "customerId": "cl5",
+      "tag": "finance"
+    },
+    {
+      "id": "fin2",
+      "text": "SaaS-kosten audit (Tooling review)",
+      "projectId": "p16",
+      "customerId": "cl5",
+      "tag": "cost-control"
+    },
+    {
+      "id": "t-1771181221427",
+      "text": "Video aanpassen",
+      "tag": "nieuw",
+      "content": "",
+      "projectId": "p3"
+    }
+  ],
+  "recurring": [
+    {
+      "id": "t-1771181235816",
+      "text": "Gemeenten toevoegen",
+      "tag": "nieuw",
+      "content": "",
+      "projectId": "p3"
+    }
+  ],
+  "doing": [
+    {
+      "id": "t3",
+      "text": "Bouw Kanban bord (inclusief bedrijven/projecten)",
+      "projectId": "p1",
+      "customerId": "cl4",
+      "tag": "dev"
+    },
+    {
+      "id": "soc1",
+      "text": "Social Media: LinkedIn content planning",
+      "projectId": "p12",
+      "customerId": "cl4",
+      "tag": "marketing"
+    },
+    {
+      "id": "t-1771188969330",
+      "text": "NDA laten tekenen Shailin",
+      "tag": "nieuw",
+      "content": "",
+      "projectId": "p9"
+    }
+  ],
+  "done": [
+    {
+      "id": "ipm_tech",
+      "text": "IPM Pro: Core Platform Development (Asset Management 3.0)",
+      "projectId": "p9",
+      "customerId": "cl2",
+      "tag": "dev",
+      "content": "Platform is technisch gereed."
+    },
+    {
+      "id": "taax_tech",
+      "text": "Taax: AI Agent basisfunctionaliteit",
+      "projectId": "p7",
+      "customerId": "cl3",
+      "tag": "dev",
+      "content": "Technisch werkend. Wacht op contract."
+    },
+    {
+      "id": "pba_base",
+      "text": "Website ProBouwAdvies.nl: Basisontwikkeling",
+      "projectId": "p6",
+      "customerId": "cl1",
+      "tag": "dev"
+    },
+    {
+      "id": "t4",
+      "text": "Installeer OpenClaw avatar",
+      "projectId": "p1",
+      "customerId": "cl4",
+      "tag": "setup"
+    },
+    {
+      "id": "t5",
+      "text": "Configureer memory search",
+      "projectId": "p1",
+      "customerId": "cl4",
+      "tag": "config"
+    },
+    {
+      "id": "t-1771181212957",
+      "text": "Website aanpassen",
+      "tag": "nieuw",
+      "content": "",
+      "projectId": "p3"
+    },
+    {
+      "id": "t-1771188957959",
+      "text": "NDA aanpassen",
+      "tag": "nieuw",
+      "content": "",
+      "projectId": "p9"
+    },
+    {
+      "id": "t-1771181229877",
+      "text": "CRM aanpassingen doorvoeren",
+      "tag": "nieuw",
+      "content": "",
+      "projectId": "p3"
+    }
+  ]
+}

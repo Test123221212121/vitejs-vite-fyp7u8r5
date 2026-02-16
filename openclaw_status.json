@@ -1,0 +1,91 @@
+{
+  "system": {
+    "version": "2026.2.13",
+    "model": "anthropic/claude-3.5-sonnet",
+    "uptime": "Active",
+    "last_heartbeat": "2026-02-15T23:59:00Z",
+    "tokens": {
+      "input": 586,
+      "output": 236,
+      "context": "25%",
+      "total": 51266,
+      "cost": 0.31
+    }
+  },
+  "processes": [
+    {
+      "name": "AssetLink Core Server",
+      "type": "server",
+      "pid": 80,
+      "status": "active",
+      "details": "Running on port 8080"
+    },
+    {
+      "name": "Browser Automation",
+      "type": "browser",
+      "status": "idle",
+      "details": "Waiting for commands"
+    }
+  ],
+  "models": [
+    {
+      "name": "Claude 3.5",
+      "provider": "Anthropic",
+      "status": "active",
+      "role": "Current / Main Agent"
+    },
+    {
+      "name": "GPT-4",
+      "provider": "OpenAI",
+      "status": "available",
+      "role": "Available"
+    },
+    {
+      "name": "Gemini Pro",
+      "provider": "Google",
+      "status": "available", 
+      "role": "Available"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "31d00cc0-9cae-4769-8f3f-c7419eb6b7f1",
+      "name": "Main Session",
+      "started": "2026-02-15T22:00:00Z",
+      "tokens": 51266,
+      "model": "Claude 3.5"
+    }
+  ],
+  "activity": [
+    {
+      "time": "23:59",
+      "event": "Added Task Manager interface"
+    },
+    {
+      "time": "23:47", 
+      "event": "Server restart: session 'mellow-trail'"
+    },
+    {
+      "time": "23:15",
+      "event": "Updated Nodes & Skills view"
+    },
+    {
+      "time": "22:40",
+      "event": "Initial Core tab implementation"
+    }
+  ],
+  "cron": [
+    {
+      "name": "Daily Morning Reminder",
+      "schedule": "0 7 * * * UTC",
+      "next_run": "2026-02-16T07:00:00Z",
+      "status": "ok"
+    },
+    {
+      "name": "Daily Evening Task Planning", 
+      "schedule": "0 20 * * * UTC",
+      "next_run": "2026-02-16T20:00:00Z",
+      "status": "ok"
+    }
+  ]
+}

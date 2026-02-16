@@ -1,0 +1,293 @@
+{
+  "companies": [
+    {
+      "id": "c1",
+      "name": "AssetLink Software",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "c2",
+      "name": "AssetLink Engineering",
+      "color": "#10b981"
+    },
+    {
+      "id": "c3",
+      "name": "AssetLink Marketing",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "c4",
+      "name": "AssetLink Group HQ",
+      "color": "#8b5cf6"
+    }
+  ],
+  "customers": [
+    {
+      "id": "cl1",
+      "name": "Bouwgroep Zuid",
+      "companyId": "c1"
+    },
+    {
+      "id": "cl2",
+      "name": "Gemeente Amsterdam",
+      "companyId": "c2"
+    },
+    {
+      "id": "cl3",
+      "name": "StartUp Hub",
+      "companyId": "c1"
+    },
+    {
+      "id": "cl4",
+      "name": "Interne Projecten",
+      "companyId": "c3"
+    },
+    {
+      "id": "cl5",
+      "name": "Board / Directie",
+      "companyId": "c4"
+    },
+    {
+      "id": "cl6",
+      "name": "MKB Klanten (WaaS)",
+      "companyId": "c1"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "name": "Dashboard & Tooling",
+      "companyId": "c1",
+      "status": "active",
+      "customerId": "cl4"
+    },
+    {
+      "id": "p2",
+      "name": "Bolt Workflows",
+      "companyId": "c1",
+      "status": "planned",
+      "customerId": "cl4"
+    },
+    {
+      "id": "p3",
+      "name": "Engineering Projects",
+      "companyId": "c2",
+      "status": "active",
+      "customerId": "cl2"
+    },
+    {
+      "id": "p4",
+      "name": "CRM Tool (Founder Program)",
+      "companyId": "c1",
+      "status": "active",
+      "customerId": "cl3"
+    },
+    {
+      "id": "p5",
+      "name": "KAM Tool (Founder Program)",
+      "companyId": "c1",
+      "status": "active",
+      "customerId": "cl1"
+    },
+    {
+      "id": "p6",
+      "name": "ProBouwAdvies",
+      "companyId": "c1",
+      "status": "active",
+      "customerId": "cl1"
+    },
+    {
+      "id": "p7",
+      "name": "Taax",
+      "companyId": "c1",
+      "status": "planned",
+      "customerId": "cl3"
+    },
+    {
+      "id": "p8",
+      "name": "Studio",
+      "companyId": "c1",
+      "status": "planned",
+      "customerId": "cl4"
+    },
+    {
+      "id": "p9",
+      "name": "IPM Pro",
+      "companyId": "c1",
+      "status": "active",
+      "customerId": "cl2"
+    },
+    {
+      "id": "p10",
+      "name": "Email Campagne (Software)",
+      "companyId": "c3",
+      "status": "active",
+      "customerId": "cl4"
+    },
+    {
+      "id": "p11",
+      "name": "Email Campagne (Engineering)",
+      "companyId": "c3",
+      "status": "active",
+      "customerId": "cl4"
+    },
+    {
+      "id": "p12",
+      "name": "Social Media Campagnes",
+      "companyId": "c3",
+      "status": "active",
+      "customerId": "cl4"
+    },
+    {
+      "id": "p13",
+      "name": "AssetLink.nl Website",
+      "companyId": "c3",
+      "status": "active",
+      "customerId": "cl4"
+    },
+    {
+      "id": "p14",
+      "name": "CEO Strategy & Vision",
+      "companyId": "c4",
+      "status": "active",
+      "customerId": "cl5"
+    },
+    {
+      "id": "p15",
+      "name": "Human Resources (HR)",
+      "companyId": "c4",
+      "status": "active",
+      "customerId": "cl5"
+    },
+    {
+      "id": "p16",
+      "name": "Finance & Operations",
+      "companyId": "c4",
+      "status": "active",
+      "customerId": "cl5"
+    },
+    {
+      "id": "p17",
+      "name": "WaaS (Website as a Service)",
+      "companyId": "c1",
+      "status": "active",
+      "customerId": "cl6"
+    }
+  ],
+  "routines": [
+    {
+      "id": "r_fajr",
+      "text": "Gebed: Fajr & Vasten start",
+      "time": "morning",
+      "icon": "\ud83c\udf19"
+    },
+    {
+      "id": "r_wake",
+      "text": "Wakker worden & Douchen",
+      "time": "morning",
+      "icon": "\ud83d\udebf"
+    },
+    {
+      "id": "r_review_am",
+      "text": "Ochtend Review: Dagplanning",
+      "time": "morning",
+      "icon": "\ud83e\udde0"
+    },
+    {
+      "id": "r_breakfast",
+      "text": "Ontbijt (indien niet vasten)",
+      "time": "morning",
+      "icon": "\u2615"
+    },
+    {
+      "id": "r_work1",
+      "text": "Deep Work Blok 1",
+      "time": "day",
+      "icon": "\ud83d\udcbb"
+    },
+    {
+      "id": "r_dhuhr",
+      "text": "Gebed: Dhuhr",
+      "time": "day",
+      "icon": "\ud83e\udd32"
+    },
+    {
+      "id": "r_lunch",
+      "text": "Lunch / Pauze",
+      "time": "day",
+      "icon": "\ud83e\udd57"
+    },
+    {
+      "id": "r_asr",
+      "text": "Gebed: Asr",
+      "time": "day",
+      "icon": "\ud83e\udd32"
+    },
+    {
+      "id": "r_sport",
+      "text": "Sporten / Beweging",
+      "time": "day",
+      "icon": "\ud83d\udcaa"
+    },
+    {
+      "id": "r_maghrib",
+      "text": "Gebed: Maghrib & Iftar",
+      "time": "evening",
+      "icon": "\ud83c\udf05"
+    },
+    {
+      "id": "r_dinner",
+      "text": "Avondeten",
+      "time": "evening",
+      "icon": "\ud83c\udf7d\ufe0f"
+    },
+    {
+      "id": "r_isha",
+      "text": "Gebed: Isha",
+      "time": "evening",
+      "icon": "\ud83e\udd32"
+    },
+    {
+      "id": "r_clean",
+      "text": "Opruimen & Schoonmaak",
+      "time": "evening",
+      "icon": "\ud83e\uddf9"
+    },
+    {
+      "id": "r_review_pm",
+      "text": "Avond Review: Reflectie",
+      "time": "evening",
+      "icon": "\ud83d\udcdd"
+    },
+    {
+      "id": "r_sleep",
+      "text": "Slapen (Op tijd)",
+      "time": "evening",
+      "icon": "\ud83d\udecf\ufe0f"
+    },
+    {
+      "id": "m_grocery",
+      "text": "Boodschappen",
+      "time": "weekly",
+      "icon": "\ud83d\uded2"
+    },
+    {
+      "id": "m_car",
+      "text": "Auto: Wassen/Onderhoud",
+      "time": "weekly",
+      "icon": "\ud83d\ude97"
+    },
+    {
+      "id": "m_apk",
+      "text": "Auto: APK Check (Jaarlijks)",
+      "time": "weekly",
+      "icon": "\ud83d\udd27"
+    },
+    {
+      "id": "m_admin",
+      "text": "Administratie bijwerken",
+      "time": "weekly",
+      "icon": "\ud83d\udcc2"
+    }
+  ]
+}

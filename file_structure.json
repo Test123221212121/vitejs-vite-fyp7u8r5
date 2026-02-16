@@ -1,0 +1,127 @@
+{
+    "workspace": {
+        "type": "folder",
+        "items": {
+            "AGENTS.md": {
+                "type": "file",
+                "icon": "📄",
+                "category": "core"
+            },
+            "SOUL.md": {
+                "type": "file",
+                "icon": "📄",
+                "category": "core"
+            },
+            "MEMORY.md": {
+                "type": "file",
+                "icon": "📄",
+                "category": "core"
+            },
+            "USER.md": {
+                "type": "file",
+                "icon": "📄",
+                "category": "core"
+            },
+            "HEARTBEAT.md": {
+                "type": "file",
+                "icon": "📄",
+                "category": "core"
+            },
+            "TOOLS.md": {
+                "type": "file",
+                "icon": "📄",
+                "category": "core"
+            },
+            "IDENTITY.md": {
+                "type": "file",
+                "icon": "📄",
+                "category": "core"
+            },
+            "server.py": {
+                "type": "file",
+                "icon": "🐍",
+                "category": "system"
+            },
+            "index.html": {
+                "type": "file",
+                "icon": "🌐",
+                "category": "system"
+            },
+            "skills": {
+                "type": "folder",
+                "items": {
+                    "agent-browser": {
+                        "type": "folder",
+                        "items": {
+                            "SKILL.md": {
+                                "type": "file",
+                                "icon": "📄",
+                                "category": "skill"
+                            },
+                            "browser.py": {
+                                "type": "file",
+                                "icon": "🐍",
+                                "category": "skill"
+                            }
+                        }
+                    },
+                    "weather": {
+                        "type": "folder",
+                        "items": {
+                            "SKILL.md": {
+                                "type": "file",
+                                "icon": "📄",
+                                "category": "skill"
+                            },
+                            "weather.py": {
+                                "type": "file",
+                                "icon": "🐍",
+                                "category": "skill"
+                            }
+                        }
+                    }
+                }
+            },
+            "memory": {
+                "type": "folder",
+                "items": {
+                    "2026-02-15.md": {
+                        "type": "file",
+                        "icon": "📝",
+                        "category": "memory"
+                    },
+                    "heartbeat-state.json": {
+                        "type": "file",
+                        "icon": "💓",
+                        "category": "memory"
+                    }
+                }
+            },
+            "data": {
+                "type": "folder",
+                "items": {
+                    "kanban.json": {
+                        "type": "file",
+                        "icon": "📋",
+                        "category": "data"
+                    },
+                    "metadata.json": {
+                        "type": "file",
+                        "icon": "📊",
+                        "category": "data"
+                    },
+                    "ai_activity.json": {
+                        "type": "file",
+                        "icon": "🤖",
+                        "category": "data"
+                    },
+                    "openclaw_status.json": {
+                        "type": "file",
+                        "icon": "📈",
+                        "category": "data"
+                    }
+                }
+            }
+        }
+    }
+}

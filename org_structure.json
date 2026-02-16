@@ -1,0 +1,21 @@
+{
+    "ceo": {
+        "name": "Ayoub",
+        "role": "CEO & Founder",
+        "avatar": "https://ui-avatars.com/api/?name=Ayoub&background=6d28d9&color=fff",
+        "tags": ["Strategy", "Vision", "Engineering"]
+    },
+    "ai_assistant": {
+        "name": "AssetLink",
+        "role": "Chief AI Assistant",
+        "avatar": "https://ui-avatars.com/api/?name=AL&background=2563eb&color=fff",
+        "model": "Claude 3.5",
+        "tags": ["Core Agent"],
+        "metrics": {
+            "skills": 8,
+            "tasks": 3,
+            "agents": 1
+        }
+    },
+    "future_agents": []
+}

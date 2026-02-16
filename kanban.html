@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetLink Kanban</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-hover: #334155;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --border: #334155;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--surface);
+        }
+
+        h1 { font-size: 1.25rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+        .emoji { font-size: 1.5rem; }
+
+        .controls { display: flex; gap: 1rem; }
+        
+        button {
+            background: var(--surface-hover);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        button:hover { background: var(--border); }
+        button.primary { background: var(--accent); border-color: var(--accent); color: white; }
+        button.primary:hover { background: var(--accent-hover); }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            overflow-x: auto;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .column {
+            background: var(--surface);
+            border-radius: 0.5rem;
+            width: 320px;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+            border: 1px solid var(--border);
+        }
+
+        .column-header {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .count {
+            background: var(--surface-hover);
+            padding: 0.125rem 0.5rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+        }
+
+        .task-list {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            overflow-y: auto;
+            flex: 1;
+            min-height: 100px; /* Drop target area */
+        }
+
+        .task-card {
+            background: var(--bg);
+            padding: 1rem;
+            border-radius: 0.375rem;
+            border: 1px solid var(--border);
+            cursor: grab;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .task-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+            border-color: var(--text-muted);
+        }
+
+        .task-card:active { cursor: grabbing; }
+
+        .task-content { margin-bottom: 0.5rem; line-height: 1.5; }
+
+        .task-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .tag {
+            background: var(--surface-hover);
+            padding: 0.125rem 0.375rem;
+            border-radius: 0.25rem;
+        }
+
+        .actions {
+            opacity: 0;
+            transition: opacity 0.2s;
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+
+        .task-card:hover .actions { opacity: 1; }
+
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #ef4444;
+            padding: 0.25rem;
+            cursor: pointer;
+        }
+
+        /* Drag & Drop styles */
+        .dragging { opacity: 0.5; }
+        .drag-over { background: var(--surface-hover); border-style: dashed; }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .modal-overlay.open { opacity: 1; pointer-events: auto; }
+
+        .modal {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            width: 400px;
+            border: 1px solid var(--border);
+        }
+
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--text-muted); }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 0.375rem;
+            color: var(--text);
+            font-family: inherit;
+        }
+        input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+        .modal-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><span class="emoji">🛠️</span> AssetLink Board</h1>
+    <div class="controls">
+        <button onclick="saveToFile()">💾 Export JSON</button>
+        <button class="primary" onclick="openAddTaskModal()">+ New Task</button>
+    </div>
+</header>
+
+<main>
+    <div class="column" id="col-todo">
+        <div class="column-header">Todo <span class="count" id="count-todo">0</span></div>
+        <div class="task-list" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="column" id="col-doing">
+        <div class="column-header">In Progress <span class="count" id="count-doing">0</span></div>
+        <div class="task-list" id="doing" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="column" id="col-done">
+        <div class="column-header">Done <span class="count" id="count-done">0</span></div>
+        <div class="task-list" id="done" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+</main>
+
+<!-- Add Task Modal -->
+<div class="modal-overlay" id="add-modal">
+    <div class="modal">
+        <h2 style="margin-bottom: 1.5rem;">Add New Task</h2>
+        <div class="form-group">
+            <label>Task Description</label>
+            <textarea id="new-task-text" rows="3" placeholder="What needs to be done?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Tag (optional)</label>
+            <input type="text" id="new-task-tag" placeholder="e.g. dev, admin, urgent">
+        </div>
+        <div class="modal-actions">
+            <button onclick="closeModal()">Cancel</button>
+            <button class="primary" onclick="addTask()">Add Task</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initial data (will try to load from localStorage first)
+    let boardData = {
+        todo: [
+            { id: "t1", text: "Review project structure", tag: "admin" },
+            { id: "t2", text: "Update MEMORY.md with insights", tag: "memory" }
+        ],
+        doing: [
+            { id: "t3", text: "Build Kanban board", tag: "dev" }
+        ],
+        done: [
+            { id: "t4", text: "Install OpenClaw avatar", tag: "setup" },
+            { id: "t5", text: "Configure memory search", tag: "config" }
+        ]
+    };
+
+    // Load from localStorage if available
+    const saved = localStorage.getItem('assetlink_kanban');
+    if (saved) {
+        try {
+            boardData = JSON.parse(saved);
+        } catch(e) { console.error("Failed to parse saved data", e); }
+    }
+
+    function renderBoard() {
+        ['todo', 'doing', 'done'].forEach(col => {
+            const list = document.getElementById(col);
+            const count = document.getElementById(`count-${col}`);
+            list.innerHTML = '';
+            
+            // Filter out null/undefined tasks just in case
+            const tasks = (boardData[col] || []).filter(t => t);
+            count.innerText = tasks.length;
+
+            tasks.forEach(task => {
+                const card = document.createElement('div');
+                card.className = 'task-card';
+                card.draggable = true;
+                card.id = task.id;
+                
+                // Store task data on element for drag handling
+                card.dataset.col = col;
+                
+                card.innerHTML = `
+                    <div class="task-content">${task.text}</div>
+                    <div class="task-meta">
+                        <span class="tag">${task.tag || 'general'}</span>
+                        <span style="font-family: monospace; opacity: 0.5;">${task.id}</span>
+                    </div>
+                    <div class="actions">
+                        <button class="delete-btn" onclick="deleteTask('${col}', '${task.id}')">✕</button>
+                    </div>
+                `;
+
+                card.addEventListener('dragstart', drag);
+                list.appendChild(card);
+            });
+        });
+        saveLocal();
+    }
+
+    function saveLocal() {
+        localStorage.setItem('assetlink_kanban', JSON.stringify(boardData));
+    }
+
+    // Drag & Drop Logic
+    function allowDrop(ev) {
+        ev.preventDefault();
+        ev.currentTarget.classList.add('drag-over');
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text/plain", ev.target.id);
+        ev.dataTransfer.setData("source-col", ev.target.dataset.col);
+        ev.target.classList.add('dragging');
+    }
+
+    // Clean up drag styles
+    document.addEventListener('dragend', (e) => {
+        e.target.classList.remove('dragging');
+        document.querySelectorAll('.task-list').forEach(el => el.classList.remove('drag-over'));
+    });
+
+    document.querySelectorAll('.task-list').forEach(el => {
+        el.addEventListener('dragleave', (e) => {
+            e.currentTarget.classList.remove('drag-over');
+        });
+    });
+
+    function drop(ev) {
+        ev.preventDefault();
+        const targetList = ev.currentTarget.closest('.task-list'); // Ensure we get the list container
+        targetList.classList.remove('drag-over');
+
+        const taskId = ev.dataTransfer.getData("text/plain");
+        const sourceColKey = ev.dataTransfer.getData("source-col");
+        const targetColKey = targetList.id;
+
+        if (sourceColKey === targetColKey) return;
+
+        // Move data
+        const taskIndex = boardData[sourceColKey].findIndex(t => t.id === taskId);
+        if (taskIndex > -1) {
+            const [task] = boardData[sourceColKey].splice(taskIndex, 1);
+            boardData[targetColKey].push(task);
+            renderBoard();
+        }
+    }
+
+    // Task Management
+    function addTask() {
+        const text = document.getElementById('new-task-text').value.trim();
+        const tag = document.getElementById('new-task-tag').value.trim();
+        if (!text) return;
+
+        const newTask = {
+            id: 't' + Date.now().toString(36), // simple unique id
+            text: text,
+            tag: tag || 'general'
+        };
+
+        boardData.todo.push(newTask);
+        renderBoard();
+        closeModal();
+        document.getElementById('new-task-text').value = '';
+        document.getElementById('new-task-tag').value = '';
+    }
+
+    function deleteTask(col, id) {
+        if(!confirm("Delete this task?")) return;
+        boardData[col] = boardData[col].filter(t => t.id !== id);
+        renderBoard();
+    }
+
+    // Modal
+    function openAddTaskModal() {
+        document.getElementById('add-modal').classList.add('open');
+        document.getElementById('new-task-text').focus();
+    }
+
+    function closeModal() {
+        document.getElementById('add-modal').classList.remove('open');
+    }
+    
+    // Close modal on outside click
+    document.getElementById('add-modal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('add-modal')) closeModal();
+    });
+
+    // Export
+    function saveToFile() {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(boardData, null, 2));
+        const downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", "kanban.json");
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+        alert("JSON exported! Send this file to the chat to sync your agent if needed.");
+    }
+
+    // Init
+    renderBoard();
+
+</script>
+</body>
+</html>
